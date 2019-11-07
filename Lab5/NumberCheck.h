@@ -1,14 +1,14 @@
 #pragma once
 #include <iostream>
+#include <vector>
 class NumberCheck
 {
 public:
-	NumberCheck() {}
-	void addNumbers(int numbers[6]);
+	NumberCheck(std::vector<int> t_numbers);
 	bool checkNumbersInRange();
 	bool checkNoRepeatedNumbers();
+	std::vector<int> getNumbers();
 private:
-	static const int NUMBER_OF_NUMBERS = 6;
-	int m_numbers[NUMBER_OF_NUMBERS];
+	std::vector<int> m_numbers;
 };
 

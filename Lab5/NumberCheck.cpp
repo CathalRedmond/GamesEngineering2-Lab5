@@ -1,55 +1,55 @@
 #include "NumberCheck.h"
 
-void NumberCheck::addNumbers(int numbers[6])
+NumberCheck::NumberCheck(std::vector<int> t_numbers)
 {
-	for (int index = 0; index < NUMBER_OF_NUMBERS; index++)
+	for (int index = 0; index < t_numbers.size(); index++)
 	{
-		m_numbers[index] = numbers[index];
+		m_numbers.push_back(t_numbers[index]);
 	}
 }
 
 bool NumberCheck::checkNumbersInRange()
 {
-	bool numbersInRange = true;
-	if (m_numbers != NULL)
+	if (!m_numbers.empty())
 	{
-		for (int index = 0; index < NUMBER_OF_NUMBERS; index++)
+		for (int index = 0; index < m_numbers.size(); index++)
 		{
 			if (m_numbers[index] < 1 || m_numbers[index] > 46)
 			{
-				numbersInRange = false;
+				return false;
 			}
 		}
 	}
 	else
 	{
-		numbersInRange = false;
+		return false;
 	}
-	return numbersInRange;
+	return true;
 }
 
 bool NumberCheck::checkNoRepeatedNumbers()
 {
-	bool noRepeatedNumbers = true;
-	if (m_numbers != NULL)
+	if (!m_numbers.empty())
 	{
-		for (int index = 0; index < NUMBER_OF_NUMBERS; index++)
+		for (int index = 0; index < m_numbers.size(); index++)
 		{
-			for (int index2 = 0; index2 < NUMBER_OF_NUMBERS; index2++)
+			for (int index2 = index + 1; index2 < m_numbers.size(); index2++)
 			{
-				if (index != index2)
+				if (m_numbers[index] == m_numbers[index2])
 				{
-					if (m_numbers[index] == m_numbers[index2])
-					{
-						noRepeatedNumbers = false;
-					}
+					return false;
 				}
 			}
 		}
 	}
 	else
 	{
-		noRepeatedNumbers = false;
+		return false;
 	}
-	return noRepeatedNumbers;
+	return true;
+}
+
+std::vector<int> NumberCheck::getNumbers()
+{
+	return m_numbers;
 }

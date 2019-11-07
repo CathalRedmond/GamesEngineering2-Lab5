@@ -1,0 +1,8 @@
+﻿  NumberCheck.cpp
+C:\Users\C00214190\Desktop\TestyTest\GamesEngineering2-Lab5\Lab5\NumberCheck.cpp(5,28): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\C00214190\Desktop\TestyTest\GamesEngineering2-Lab5\Lab5\NumberCheck.cpp(15,29): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\C00214190\Desktop\TestyTest\GamesEngineering2-Lab5\Lab5\NumberCheck.cpp(34,29): warning C4018:  '<': signed/unsigned mismatch
+  TestMain.cpp
+  Generating Code...
+C:\Users\C00214190\Desktop\TestyTest\GamesEngineering2-Lab5\Lab5\NumberCheck.cpp(36,40): warning C4018:  '<': signed/unsigned mismatch
+  Lab5Test.vcxproj -> C:\Users\C00214190\Desktop\TestyTest\GamesEngineering2-Lab5\Debug\Lab5Test.exe
